@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative Portfolio — Denendro Putro Nuswantoro. Film Producer, Project Manager, Talent Coordinator.">
+  <title>Denendro Putro Nuswantoro — Hixoo Creative Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="progress-line" id="progress"></div>
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg" id="mainNav">
+    <div class="container-fluid px-0">
+      <a class="navbar-brand" href="#hero">Hixoo</a>
+      <button class="navbar-toggler ms-auto" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarContent"
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#filmography" data-nav="filmography">FILMOGRAPHY</a></li>
+          <li class="nav-item"><a class="nav-link" href="#videography" data-nav="videography">VIDEOGRAPHY</a></li>
+          <li class="nav-item"><a class="nav-link" href="#photography" data-nav="photography">PHOTOGRAPHY</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact"     data-nav="contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+
+    <!-- Refined pixel ornament — thin lines, dots, brackets -->
+    <div class="hero-pixel-ornament" aria-hidden="true">
+      <svg class="pixel-art-svg" viewBox="0 0 160 560" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid meet">
+        <g fill="#EEE030" opacity="0.5">
+          <!-- Top bracket -->
+          <rect x="120" y="0"   width="2"  height="40"/>
+          <rect x="80"  y="0"   width="42" height="2"/>
+          <rect x="80"  y="0"   width="2"  height="10"/>
+          <!-- Dot cluster top -->
+          <rect x="100" y="54"  width="3" height="3"/>
+          <rect x="108" y="54"  width="3" height="3"/>
+          <rect x="116" y="54"  width="3" height="3"/>
+          <rect x="124" y="54"  width="3" height="3"/>
+          <rect x="104" y="62"  width="3" height="3"/>
+          <rect x="112" y="62"  width="3" height="3"/>
+          <rect x="120" y="62"  width="3" height="3"/>
+          <rect x="108" y="70"  width="3" height="3"/>
+          <rect x="116" y="70"  width="3" height="3"/>
+          <!-- Thin vertical rule 1 -->
+          <rect x="140" y="0"   width="1" height="120"/>
+          <rect x="148" y="20"  width="1" height="80"/>
+          <!-- Small square accent -->
+          <rect x="130" y="100" width="6" height="6"/>
+          <rect x="138" y="108" width="6" height="6"/>
+          <!-- Dashes -->
+          <rect x="90"  y="130" width="12" height="1"/>
+          <rect x="108" y="130" width="6"  height="1"/>
+          <rect x="120" y="130" width="18" height="1"/>
+          <!-- Thin vertical rule 2 -->
+          <rect x="155" y="140" width="1" height="100"/>
+          <!-- Film perf strip -->
+          <rect x="128" y="150" width="8" height="4"/>
+          <rect x="128" y="162" width="8" height="4"/>
+          <rect x="128" y="174" width="8" height="4"/>
+          <rect x="128" y="186" width="8" height="4"/>
+          <rect x="128" y="198" width="8" height="4"/>
+          <rect x="128" y="210" width="8" height="4"/>
+          <rect x="128" y="222" width="8" height="4"/>
+          <rect x="128" y="234" width="8" height="4"/>
+          <rect x="137" y="150" width="1" height="88"/>
+          <!-- Cross accent -->
+          <rect x="98"  y="200" width="1" height="14"/>
+          <rect x="93"  y="206" width="11" height="1"/>
+          <!-- Middle dot row -->
+          <rect x="88"  y="270" width="2" height="2"/>
+          <rect x="96"  y="270" width="2" height="2"/>
+          <rect x="104" y="270" width="2" height="2"/>
+          <rect x="112" y="270" width="2" height="2"/>
+          <rect x="120" y="270" width="2" height="2"/>
+          <rect x="128" y="270" width="2" height="2"/>
+          <rect x="136" y="270" width="2" height="2"/>
+          <rect x="144" y="270" width="2" height="2"/>
+          <rect x="152" y="270" width="2" height="2"/>
+          <!-- Thin vertical rules 3 -->
+          <rect x="100" y="285" width="1" height="80"/>
+          <rect x="120" y="290" width="1" height="60"/>
+          <!-- Small pixel grid -->
+          <rect x="108" y="300" width="4" height="4"/>
+          <rect x="114" y="300" width="4" height="4"/>
+          <rect x="108" y="306" width="4" height="4"/>
+          <rect x="114" y="306" width="4" height="4"/>
+          <rect x="108" y="312" width="4" height="4"/>
+          <rect x="114" y="312" width="4" height="4"/>
+          <!-- Dashes mid -->
+          <rect x="130" y="320" width="8"  height="1"/>
+          <rect x="142" y="320" width="16" height="1"/>
+          <rect x="130" y="326" width="28" height="1"/>
+          <!-- Cross 2 -->
+          <rect x="148" y="355" width="1" height="14"/>
+          <rect x="143" y="361" width="11" height="1"/>
+          <!-- Thin vertical rule 4 -->
+          <rect x="155" y="380" width="1" height="100"/>
+          <!-- Dot cluster bottom -->
+          <rect x="88"  y="400" width="3" height="3"/>
+          <rect x="96"  y="400" width="3" height="3"/>
+          <rect x="92"  y="408" width="3" height="3"/>
+          <rect x="100" y="408" width="3" height="3"/>
+          <rect x="88"  y="416" width="3" height="3"/>
+          <rect x="96"  y="416" width="3" height="3"/>
+          <!-- Bottom perf -->
+          <rect x="128" y="430" width="6" height="3"/>
+          <rect x="128" y="440" width="6" height="3"/>
+          <rect x="128" y="450" width="6" height="3"/>
+          <rect x="128" y="460" width="6" height="3"/>
+          <!-- Bottom bracket -->
+          <rect x="80"  y="518" width="2"  height="42"/>
+          <rect x="80"  y="558" width="56" height="2"/>
+          <rect x="134" y="548" width="2"  height="12"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-reveal="up">CREATIVE PORTFOLIO 2025</p>
+      <h1 class="hero-title" data-reveal="up" data-delay="1">PORTFOLIO</h1>
+      <div class="hero-name" data-reveal="up" data-delay="2">
+        <strong>Denendro Putro Nuswantoro</strong><br>
+        Film Producer &amp; Creative Practitioner
+      </div>
+      <div class="hero-skills" data-reveal="up" data-delay="3">
+        <span class="skill-tag"><span>Film Producer</span></span>
+        <span class="skill-tag"><span>Project Management</span></span>
+        <span class="skill-tag"><span>Talent Coordinator</span></span>
+      </div>
+      <div class="hero-socials" data-reveal="up" data-delay="4">
+        <a href="https://instagram.com/therealdnenptr" target="_blank" rel="noopener" class="hero-social">@therealdnenptr</a>
+        <a href="https://instagram.com/hixolojik.id"   target="_blank" rel="noopener" class="hero-social">@hixolojik.id</a>
+      </div>
+    </div>
+
+    <div class="hero-sections-bar">
+      <a href="#filmography" class="hero-section-btn"><span class="num">01</span> FILMOGRAPHY</a>
+      <a href="#videography" class="hero-section-btn"><span class="num">02</span> VIDEOGRAPHY</a>
+      <a href="#photography" class="hero-section-btn"><span class="num">03</span> PHOTOGRAPHY</a>
+    </div>
+  </section>
+
+
+  <!-- FILMOGRAPHY -->
+  <section class="section" id="filmography">
+    <div class="bg-word" style="top:60px; right:-40px;" aria-hidden="true">FILM</div>
+    <div class="container-xxl px-4 px-lg-5">
+      <div class="section-head" data-reveal="up">
+        <div>
+          <p class="section-index">// 01</p>
+          <h2 class="section-title">FILM<span>OGRAPHY</span></h2>
+        </div>
+        <span class="section-year">2024 — 2026</span>
+      </div>
+
+      <div class="row g-1">
+
+        <!-- 1. SIALAN NIH FILM -->
+        <div class="col-12 col-md-6" data-reveal="up" data-delay="1">
+          <div class="card h-100">
+            <div class="card-body p-0">
+              <div class="film-still-wrap">
+                <a href="https://drive.google.com/drive/folders/1bMcQurG-1a9QrgsiX-kOuXQAMNGv0R0S?usp=sharing" target="_blank" rel="noopener">
+                  <div class="ratio ratio-16x9">
+                    <img src="stills/sialan-nih-film.jpg" class="still-img" alt="Sialan Nih Film — still">
+                  </div>
+                  <div class="film-overlay"><div class="film-overlay-text">VIEW PROJECT<br>▶ CLICK HERE!!!</div></div>
+                </a>
+              </div>
+              <div class="film-info">
+                <div class="film-meta-top"><span class="film-badge">2024</span></div>
+                <h3 class="film-title-text">Sialan Nih Film</h3>
+                <dl class="film-details">
+                  <div class="detail-item"><dt>Directed by</dt><dd>Deru Ibnu Ghifari</dd></div>
+                  <div class="detail-item"><dt>Prod. House</dt><dd>Satusama Production</dd></div>
+                  <div class="detail-item role full"><dt>Personal Role</dt><dd>Line Producer &amp; Cast</dd></div>
+                </dl>
+                <a href="https://drive.google.com/drive/folders/1bMcQurG-1a9QrgsiX-kOuXQAMNGv0R0S?usp=sharing" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm">
+                  <span class="lbl">VIEW STILLS</span><span class="arr">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. AFRICAN ROOTS -->
+        <div class="col-12 col-md-6" data-reveal="up" data-delay="2">
+          <div class="card h-100">
+            <div class="card-body p-0">
+              <div class="film-still-wrap">
+                <a href="https://drive.google.com/drive/folders/1oiKPYo09tIrr5OKzvWWKFt0tGgkmgS4M" target="_blank" rel="noopener">
+                  <div class="ratio ratio-16x9">
+                    <img src="stills/african-roots.jpg" class="still-img" alt="African Roots — poster">
+                  </div>
+                  <div class="film-overlay"><div class="film-overlay-text">VIEW PROJECT<br>▶ CLICK HERE!!!</div></div>
+                </a>
+              </div>
+              <div class="film-info">
+                <div class="film-meta-top"><span class="film-badge">2024</span></div>
+                <h3 class="film-title-text">African Roots</h3>
+                <p class="film-sub">The Hearts of Little Black Sheep</p>
+                <dl class="film-details">
+                  <div class="detail-item"><dt>Directed by</dt><dd>Jordan Gersson Salim</dd></div>
+                  <div class="detail-item"><dt>Prod. House</dt><dd>Piring Kotor Production</dd></div>
+                  <div class="detail-item role full"><dt>Personal Role</dt><dd>Producer</dd></div>
+                </dl>
+                <div class="film-awards">
+                  <span class="award-tag">IFC Official Selection 2025</span>
+                  <span class="award-tag">Lift-Off Global Sessions</span>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1oiKPYo09tIrr5OKzvWWKFt0tGgkmgS4M" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm">
+                  <span class="lbl">VIEW STILLS</span><span class="arr">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. MANDEG -->
+        <div class="col-12 col-md-6" data-reveal="up" data-delay="1">
+          <div class="card h-100">
+            <div class="card-body p-0">
+              <div class="film-still-wrap">
+                <a href="https://drive.google.com/file/d/1eXQdEFr51NG0sQk-JFYx8pdfO6NVH5_r/view?usp=drivesdk" target="_blank" rel="noopener">
+                  <div class="ratio ratio-16x9">
+                    <img src="stills/mandeg.jpg" class="still-img" alt="Mandeg — still">
+                  </div>
+                  <div class="film-overlay"><div class="film-overlay-text">WATCH FILM<br>▶ CLICK HERE!!!</div></div>
+                </a>
+              </div>
+              <div class="film-info">
+                <div class="film-meta-top"><span class="film-badge">2024</span></div>
+                <h3 class="film-title-text">Mandeg</h3>
+                <dl class="film-details">
+                  <div class="detail-item"><dt>Directed by</dt><dd>Nedyan Budiwardana</dd></div>
+                  <div class="detail-item"><dt>Prod. House</dt><dd>GoksLancar</dd></div>
+                  <div class="detail-item role full"><dt>Personal Role</dt><dd>Producer</dd></div>
+                </dl>
+                <a href="https://drive.google.com/file/d/1eXQdEFr51NG0sQk-JFYx8pdfO6NVH5_r/view?usp=drivesdk" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm">
+                  <span class="lbl">WATCH FILM</span><span class="arr">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. SECOND SACRAMENT -->
+        <div class="col-12 col-md-6" data-reveal="up" data-delay="2">
+          <div class="card h-100">
+            <div class="card-body p-0">
+              <div class="film-still-wrap">
+                <a href="https://drive.google.com/drive/folders/11Fw00MTh_xgySlSVtQU2F_pkVyDcvk9b?usp=sharing" target="_blank" rel="noopener">
+                  <div class="ratio ratio-16x9">
+                    <img src="stills/second-sacrament.jpg" class="still-img" alt="Second Sacrament — still">
+                  </div>
+                  <div class="film-overlay"><div class="film-overlay-text">VIEW PROJECT<br>▶ CLICK HERE!!!</div></div>
+                </a>
+              </div>
+              <div class="film-info">
+                <div class="film-meta-top"><span class="film-badge">2024</span></div>
+                <h3 class="film-title-text">Second Sacrament</h3>
+                <dl class="film-details">
+                  <div class="detail-item"><dt>Directed by</dt><dd>—</dd></div>
+                  <div class="detail-item"><dt>Prod. House</dt><dd>—</dd></div>
+                  <div class="detail-item role full"><dt>Personal Role</dt><dd>Producer</dd></div>
+                </dl>
+                <a href="https://drive.google.com/drive/folders/11Fw00MTh_xgySlSVtQU2F_pkVyDcvk9b?usp=sharing" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm">
+                  <span class="lbl">VIEW STILLS</span><span class="arr">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. BERKABUNG -->
+        <div class="col-12 col-md-6" data-reveal="up" data-delay="1">
+          <div class="card h-100">
+            <div class="card-body p-0">
+              <div class="film-still-wrap">
+                <a href="https://drive.google.com/file/d/1EcXhPiiobmyv2ynbMD-0Z1bT9ASY6t55/view?usp=sharing" target="_blank" rel="noopener">
+                  <div class="ratio ratio-16x9">
+                    <img src="stills/berkabung.jpg" class="still-img" alt="Berkabung — still">
+                  </div>
+                  <div class="film-overlay"><div class="film-overlay-text">WATCH FILM<br>▶ CLICK HERE!!!</div></div>
+                </a>
+              </div>
+              <div class="film-info">
+                <div class="film-meta-top"><span class="film-badge">2025</span></div>
+                <h3 class="film-title-text">Berkabung</h3>
+                <dl class="film-details">
+                  <div class="detail-item"><dt>Directed by</dt><dd>Jordan Gersson Salim</dd></div>
+                  <div class="detail-item"><dt>Prod. House</dt><dd>Piring Kotor Production</dd></div>
+                  <div class="detail-item role full"><dt>Personal Role</dt><dd>Producer</dd></div>
+                </dl>
+                <a href="https://drive.google.com/file/d/1EcXhPiiobmyv2ynbMD-0Z1bT9ASY6t55/view?usp=sharing" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm">
+                  <span class="lbl">WATCH FILM</span><span class="arr">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. GRAND OPENING HIMPRODIA -->
+        <div class="col-12 col-md-6" data-reveal="up" data-delay="2">
+          <div class="card h-100">
+            <div class="card-body p-0">
+              <div class="film-still-wrap">
+                <a href="https://youtu.be/uEW2xHPoxgE?si=Yx1o6Z_jgpxrzHnY" target="_blank" rel="noopener">
+                  <div class="ratio ratio-16x9">
+                    <img src="stills/go-himprodia.jpg" class="still-img" alt="Grand Opening Himprodia — still">
+                    <div class="yt-badge">▶ YOUTUBE</div>
+                  </div>
+                  <div class="film-overlay"><div class="film-overlay-text">WATCH ON YOUTUBE<br>▶ CLICK HERE!!!</div></div>
+                </a>
+              </div>
+              <div class="film-info">
+                <div class="film-meta-top"><span class="film-badge">2025</span></div>
+                <h3 class="film-title-text">Grand Opening<br>Himprodia</h3>
+                <dl class="film-details">
+                  <div class="detail-item"><dt>Directed by</dt><dd>Robby Farhan Martyano</dd></div>
+                  <div class="detail-item"><dt>Prod. House</dt><dd>Himprodia UI 2025</dd></div>
+                  <div class="detail-item role full"><dt>Personal Role</dt><dd>Co-Director &amp; Cast</dd></div>
+                </dl>
+                <a href="https://youtu.be/uEW2xHPoxgE?si=Yx1o6Z_jgpxrzHnY" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm">
+                  <span class="lbl">WATCH ON YT</span><span class="arr">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. IMAM & HIS 9 FRIENDS -->
+        <div class="col-12 col-md-6" data-reveal="up" data-delay="1">
+          <div class="card h-100">
+            <div class="card-body p-0">
+              <div class="film-still-wrap">
+                <a href="https://drive.google.com/drive/folders/1WhFuTVoLWqm1wlAvnjpNduHinJ_X31cY?usp=sharing" target="_blank" rel="noopener">
+                  <div class="ratio ratio-16x9">
+                    <img src="stills/imam-9-friends.jpg" class="still-img" alt="Imam and His 9 Friends — still">
+                  </div>
+                  <div class="film-overlay"><div class="film-overlay-text">VIEW PROJECT<br>▶ CLICK HERE!!!</div></div>
+                </a>
+              </div>
+              <div class="film-info">
+                <div class="film-meta-top"><span class="film-badge">2025</span></div>
+                <h3 class="film-title-text">Imam &amp; His 9 Friends</h3>
+                <dl class="film-details">
+                  <div class="detail-item"><dt>Directed by</dt><dd>Deru Ibnu Ghifari</dd></div>
+                  <div class="detail-item"><dt>Prod. House</dt><dd>Piring Kotor Production</dd></div>
+                  <div class="detail-item role full"><dt>Personal Role</dt><dd>Line Producer &amp; Cast</dd></div>
+                </dl>
+                <a href="https://drive.google.com/drive/folders/1WhFuTVoLWqm1wlAvnjpNduHinJ_X31cY?usp=sharing" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm">
+                  <span class="lbl">VIEW STILLS</span><span class="arr">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. BEM FTUI -->
+        <div class="col-12 col-md-6" data-reveal="up" data-delay="2">
+          <div class="card h-100">
+            <div class="card-body p-0">
+              <div class="film-still-wrap">
+                <a href="https://drive.google.com/drive/folders/1auJRCXPDHrCcwrfno_kgoLl6bzMpiOLG?usp=sharing" target="_blank" rel="noopener">
+                  <div class="ratio ratio-16x9">
+                    <img src="stills/bem-ftui.jpg" class="still-img" alt="BEM FTUI — still">
+                  </div>
+                  <div class="film-overlay"><div class="film-overlay-text">VIEW PROJECT<br>▶ CLICK HERE!!!</div></div>
+                </a>
+              </div>
+              <div class="film-info">
+                <div class="film-meta-top"><span class="film-badge">2025</span></div>
+                <h3 class="film-title-text">BEM FTUI</h3>
+                <dl class="film-details">
+                  <div class="detail-item"><dt>Directed by</dt><dd>—</dd></div>
+                  <div class="detail-item"><dt>Prod. House</dt><dd>BEM FTUI</dd></div>
+                  <div class="detail-item role full"><dt>Personal Role</dt><dd>Producer</dd></div>
+                </dl>
+                <a href="https://drive.google.com/drive/folders/1auJRCXPDHrCcwrfno_kgoLl6bzMpiOLG?usp=sharing" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm">
+                  <span class="lbl">VIEW STILLS</span><span class="arr">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. PARA KSATRIYA GRAHA — Featured -->
+        <div class="col-12" data-reveal="up">
+          <div class="film-card-featured">
+            <div class="row g-0">
+              <div class="col-12 col-lg-7">
+                <div class="film-still-wrap" style="height:100%; min-height:280px;">
+                  <a href="#" style="display:block; height:100%;">
+                    <div class="ratio ratio-16x9">
+                      <div class="film-still-placeholder" style="background:var(--s3);">
+                        <div class="ph-icon"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                        <span class="ph-title">PARA KSATRIYA GRAHA</span>
+                        <span class="ph-title" style="font-size:5px; opacity:0.5;">STILLS COMING SOON</span>
+                      </div>
+                    </div>
+                    <div class="film-overlay"><div class="film-overlay-text">COMING SOON<br>▶ STAY TUNED</div></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-5">
+                <div class="film-info h-100 d-flex flex-column justify-content-center" style="padding:48px 40px;">
+                  <span class="featured-badge">★ UPCOMING 2026</span>
+                  <span class="film-badge mb-3" style="align-self:flex-start;">2026</span>
+                  <h3 class="film-title-text" style="font-size:12px; margin-bottom:18px;">Para Ksatriya Graha</h3>
+                  <dl class="film-details">
+                    <div class="detail-item"><dt>Directed by</dt><dd>Jordan Gersson Salim</dd></div>
+                    <div class="detail-item"><dt>Prod. House</dt><dd>Piring Kotor Production</dd></div>
+                    <div class="detail-item role full"><dt>Personal Role</dt><dd>Producer</dd></div>
+                  </dl>
+                  <a href="#" class="btn-pixel mt-2 align-self-start">
+                    <span class="lbl">COMING SOON</span><span class="arr">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="pixel-line"></div>
+
+  <!-- VIDEOGRAPHY -->
+  <section class="section video-section-wrap" id="videography">
+    <div class="container-xxl px-4 px-lg-5">
+      <div class="section-head" data-reveal="up">
+        <div>
+          <p class="section-index">// 02</p>
+          <h2 class="section-title">VIDEO<span>GRAPHY</span></h2>
+        </div>
+        <span class="section-year">2025</span>
+      </div>
+
+      <div class="video-card" data-reveal="up">
+        <div class="row g-0">
+          <div class="col-12 col-lg-5">
+            <div class="video-info">
+              <span class="film-badge" style="align-self:flex-start;">2025</span>
+              <h3 class="video-title-text">Raditya Dika's<br>Timun Jelita MV</h3>
+              <dl class="film-details">
+                <div class="detail-item"><dt>Format</dt><dd style="color:var(--ink);">Music Video</dd></div>
+                <div class="detail-item"><dt>Directed by</dt><dd style="color:var(--ink);">Deru Ibnu Ghifari</dd></div>
+                <div class="detail-item"><dt>Prod. House</dt><dd style="color:var(--ink);">Piring Kotor Production</dd></div>
+                <div class="detail-item role full"><dt>Personal Role</dt><dd>Producer</dd></div>
+              </dl>
+              <a href="https://drive.google.com/file/d/1pxRMRLzMJa5DpsLjVeRZIr8KkqsuaIlx/view?usp=drivesdk" target="_blank" rel="noopener" class="btn-pixel align-self-start">
+                <span class="lbl">WATCH MV</span><span class="arr">→</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7">
+            <a href="https://drive.google.com/file/d/1pxRMRLzMJa5DpsLjVeRZIr8KkqsuaIlx/view?usp=drivesdk"
+               target="_blank" rel="noopener" class="video-screen">
+              <img src="stills/timun-jelita.jpg" class="video-thumb" alt="Timun Jelita MV">
+              <div class="video-play-overlay">
+                <div class="play-icon"></div>
+              </div>
+              <div class="video-screen-label">TIMUN JELITA MV — RADITYA DIKA · 2025</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pixel-line"></div>
+
+  <!-- PHOTOGRAPHY -->
+  <section class="section" id="photography">
+    <div class="bg-word" style="bottom:40px; left:-20px;" aria-hidden="true">PHOTO</div>
+    <div class="container-xxl px-4 px-lg-5">
+      <div class="section-head" data-reveal="up">
+        <div>
+          <p class="section-index">// 03</p>
+          <h2 class="section-title">PHOTO<span>GRAPHY</span></h2>
+        </div>
+        <span class="section-year">2025</span>
+      </div>
+      <div class="row g-1">
+
+        <!-- Himprodia Meet The Team -->
+        <div class="col-12 col-md-6" data-reveal="left" data-delay="1">
+          <div class="photo-card-wrap">
+            <a href="https://www.instagram.com/p/DHgD4hDxTxq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">
+              <div class="ratio ratio-1x1">
+                <img src="photos/himprodia-mtt.jpg" class="still-img" alt="Himprodia Meet The Team Photoshoot">
+              </div>
+              <div class="photo-overlay"><div class="photo-overlay-text">VIEW ON INSTAGRAM<br>▶ CLICK HERE!!!</div></div>
+            </a>
+            <div class="photo-info">
+              <span class="film-badge mb-2">2025</span>
+              <h3 class="photo-title-text">hImprodIa's<br>Meet The Team<br>Photoshoot</h3>
+              <p class="photo-role-text">Project Manager</p>
+              <a href="https://www.instagram.com/p/DHgD4hDxTxq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm">
+                <span class="lbl">VIEW ON IG</span><span class="arr">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- UIFW Photoshoot -->
+        <div class="col-12 col-md-6" data-reveal="right" data-delay="2">
+          <div class="photo-card-wrap">
+            <a href="https://drive.google.com/drive/folders/1DZJJkHWRX1oqT-pWX2abPsw1mIPnA63L" target="_blank" rel="noopener">
+              <div class="ratio ratio-1x1">
+                <img src="photos/uifw.jpg" class="still-img" alt="UIFW Photoshoot Documentation">
+              </div>
+              <div class="photo-overlay"><div class="photo-overlay-text">VIEW ALBUM<br>▶ CLICK HERE!!!</div></div>
+            </a>
+            <div class="photo-info">
+              <span class="film-badge mb-2">2025</span>
+              <h3 class="photo-title-text">UIFW's<br>Photoshoot<br>Documentation</h3>
+              <p class="photo-role-text">Cam &amp; Light Assist</p>
+              <a href="https://drive.google.com/drive/folders/1DZJJkHWRX1oqT-pWX2abPsw1mIPnA63L" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm">
+                <span class="lbl">VIEW ALBUM</span><span class="arr">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="pixel-line"></div>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="container-xxl px-4 px-lg-5">
+      <div class="section-head" data-reveal="up">
+        <div>
+          <p class="section-index">// 04</p>
+          <h2 class="section-title">GET IN<span> TOUCH</span></h2>
+        </div>
+        <span class="section-year">OPEN FOR WORK</span>
+      </div>
+      <div class="row g-1">
+        <div class="col-12 col-md-4" data-reveal="up" data-delay="1">
+          <a href="https://wa.me/6281295038577" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon">[WA]</span>
+            <span class="contact-label">WHATSAPP</span>
+            <span class="contact-value">+62 812-9503-8577</span>
+            <span class="btn-pixel btn-pixel-sm d-inline-flex"><span class="lbl">MESSAGE</span><span class="arr">→</span></span>
+          </a>
+        </div>
+        <div class="col-12 col-md-4" data-reveal="up" data-delay="2">
+          <a href="https://instagram.com/therealdnenptr" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon">[IG]</span>
+            <span class="contact-label">INSTAGRAM</span>
+            <span class="contact-value">@therealdnenptr</span>
+            <span class="btn-pixel btn-pixel-sm d-inline-flex"><span class="lbl">FOLLOW</span><span class="arr">→</span></span>
+          </a>
+        </div>
+        <div class="col-12 col-md-4" data-reveal="up" data-delay="3">
+          <a href="mailto:dyruinsnus@gmail.com" class="contact-card">
+            <span class="contact-icon">[EM]</span>
+            <span class="contact-label">EMAIL</span>
+            <span class="contact-value">dyruinsnus@gmail.com</span>
+            <span class="btn-pixel btn-pixel-sm d-inline-flex"><span class="lbl">SEND EMAIL</span><span class="arr">→</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container-xxl px-4 px-lg-5">
+      <div class="row align-items-end">
+        <div class="col">
+          <p class="footer-name">Denendro Putro Nuswantoro</p>
+          <p class="footer-handle">@therealdnenptr &nbsp;·&nbsp; @hixolojik.id</p>
+        </div>
+        <div class="col-auto footer-right-text text-end">
+          <p>Creative Portfolio</p>
+          <p>Film · Video · Photo</p>
+          <p>© 2025 Hixoo</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
