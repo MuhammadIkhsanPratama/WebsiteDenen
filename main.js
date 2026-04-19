@@ -3,8 +3,11 @@
    ============================================================ */
 'use strict';
 
-/* 1. CUSTOM CURSOR */
+/* 1. CUSTOM CURSOR — desktop only */
 (function () {
+  /* Skip on touch/mobile devices */
+  if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) return;
+
   const cur  = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   if (!cur || !ring) return;
