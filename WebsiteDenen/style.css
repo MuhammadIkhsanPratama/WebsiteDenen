@@ -233,6 +233,95 @@ body::before {
 .hero-section-btn:hover::after { width: 100%; }
 .hero-section-btn .num { font-size: 6px; color: rgba(238,224,48,0.3); }
 
+/* ── 8b. HERO PERSON IMAGE ─────────────────────────────── */
+.hero-person {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(300px, 40vw, 560px);
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.hero-person-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: screen;
+  filter: contrast(1.05) brightness(1.1);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 65%,
+    rgba(0,0,0,0.6) 85%,
+    rgba(0,0,0,0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 65%,
+    rgba(0,0,0,0.6) 85%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
+/* Ensure hero-content stays above person */
+.hero-content { z-index: 2; position: relative; }
+
+@media (max-width: 767.98px) {
+  .hero-person {
+    width: clamp(200px, 70vw, 340px);
+    opacity: 0.45;
+  }
+}
+
+
+/* ── 8b. HERO PERSON IMAGE ─────────────────────────────── */
+.hero-person {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(300px, 40vw, 560px);
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.hero-person-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: screen;
+  filter: contrast(1.05) brightness(1.1);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 65%,
+    rgba(0,0,0,0.6) 85%,
+    rgba(0,0,0,0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 65%,
+    rgba(0,0,0,0.6) 85%,
+    rgba(0,0,0,0) 100%
+  );
+}
+.hero-content { z-index: 2; position: relative; }
+
+@media (max-width: 767.98px) {
+  .hero-person {
+    width: clamp(200px, 70vw, 340px);
+    opacity: 0.45;
+  }
+}
+
 /* ── 9. SECTION BASE ────────────────────────────────────── */
 .section { padding: 100px 0; position: relative; }
 .section-head {
