@@ -91,3 +91,27 @@
     wrap.addEventListener('mouseleave', () => { img.style.transform = 'scale(1)'; });
   });
 })();
+
+/* 8. CLOSE MOBILE NAV ON LINK CLICK & ESC */
+(function () {
+  const nav        = document.getElementById('mainNav');
+  const toggler    = nav ? nav.querySelector('.navbar-toggler') : null;
+  const collapseEl = document.getElementById('navbarContent');
+  if (!nav || !toggler || !collapseEl) return;
+
+  /* Close menu when any nav-link is tapped */
+  collapseEl.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 992 && collapseEl.classList.contains('show')) {
+        toggler.click();
+      }
+    });
+  });
+
+  /* Close on ESC key */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && collapseEl.classList.contains('show')) {
+      toggler.click();
+    }
+  });
+})();
