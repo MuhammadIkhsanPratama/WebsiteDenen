@@ -110,6 +110,8 @@ body::before {
 .navbar-brand {
   font-family: var(--font-px); font-size: 11px;
   color: var(--y) !important; letter-spacing: 2px; text-decoration: none;
+  padding: 4px 0;
+  line-height: 1;
 }
 .navbar-nav { gap: 36px; }
 .nav-link {
@@ -152,7 +154,6 @@ body::before {
     flex-wrap: nowrap;
   }
 
-  /* Override Bootstrap collapse so we control animation via CSS */
   .navbar-collapse {
     display: block !important;
     width: 100%;
@@ -175,14 +176,12 @@ body::before {
     border-top-color: rgba(238,224,48,0.10);
   }
 
-  /* Nav list */
   .navbar-collapse .navbar-nav {
     flex-direction: column;
     gap: 0;
     width: 100%;
   }
 
-  /* Each row */
   .navbar-collapse .nav-item {
     border-bottom: 1px solid rgba(238,224,48,0.07);
   }
@@ -190,7 +189,6 @@ body::before {
     border-bottom: none;
   }
 
-  /* Link row: left accent bar + label + number */
   .navbar-collapse .nav-link {
     display: flex !important;
     align-items: center;
@@ -204,13 +202,11 @@ body::before {
     text-decoration: none;
   }
 
-  /* Kill the desktop underline pseudo */
   .navbar-collapse .nav-link::after {
     display: none !important;
     width: 0; height: 0;
   }
 
-  /* Section number on the right */
   .navbar-collapse .nav-link[data-nav="filmography"]:before { content: '01'; }
   .navbar-collapse .nav-link[data-nav="videography"]:before  { content: '02'; }
   .navbar-collapse .nav-link[data-nav="photography"]:before  { content: '03'; }
@@ -226,7 +222,6 @@ body::before {
     padding-right: 4px;
   }
 
-  /* Hover / active state */
   .navbar-collapse .nav-link:hover,
   .navbar-collapse .nav-link.active {
     color: var(--y) !important;
@@ -253,29 +248,11 @@ body::before {
   pointer-events: none; z-index: 0;
 }
 
-/* Pixel ornament */
-.hero-pixel-ornament {
-  position: absolute; top: 64px; right: 0;
-  width: clamp(120px, 14vw, 220px);
-  bottom: 72px;
-  pointer-events: none; z-index: 0;
-  display: flex; align-items: center; justify-content: center; overflow: hidden;
-}
-.pixel-art-svg { width: 100%; height: 100%; }
-
 /* Hero center content */
 .hero-content {
   flex: 1; display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  text-align: center; padding: 60px 24px 160px; position: relative; z-index: 1;
-}
-.hero-eyebrow {
-  font-family: var(--font-px); font-size: 7px; color: var(--muted);
-  letter-spacing: 5px; margin-bottom: 40px;
-  display: flex; align-items: center; justify-content: center; gap: 14px;
-}
-.hero-eyebrow::before, .hero-eyebrow::after {
-  content: ''; width: 24px; height: 1px; background: var(--muted); flex-shrink: 0;
+  text-align: center; padding: 60px 24px 160px; position: relative; z-index: 2;
 }
 .hero-title {
   font-family: var(--font-px); font-size: clamp(36px, 8vw, 96px);
@@ -294,57 +271,14 @@ body::before {
 .hero-name::after  { bottom: -1px; right: -1px; }
 .hero-name strong  { color: var(--y); font-weight: 500; }
 
-.hero-skills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 44px; justify-content: center; }
-.skill-tag {
-  font-family: var(--font-px); font-size: 6px; letter-spacing: 1px;
-  padding: 10px 16px; border: 1px solid rgba(238,224,48,0.3); color: rgba(238,224,48,0.7);
-  transition: color 0.25s; position: relative; overflow: hidden; display: inline-block;
-}
-.skill-tag::before {
-  content: ''; position: absolute; inset: 0;
-  background: var(--y); transform: translateX(-101%); transition: transform 0.3s var(--ease);
-}
-.skill-tag:hover         { color: var(--bg); border-color: var(--y); }
-.skill-tag:hover::before { transform: translateX(0); }
-.skill-tag span          { position: relative; z-index: 1; }
-
-.hero-socials { display: flex; gap: 32px; justify-content: center; }
-.hero-social {
-  font-family: var(--font-bd); font-size: 11px; color: var(--muted);
-  text-decoration: none; letter-spacing: 1px; transition: color 0.2s;
-  display: flex; align-items: center; gap: 6px;
-}
-.hero-social::before { content: '↗'; font-size: 10px; }
-.hero-social:hover   { color: var(--y); }
-
-.hero-sections-bar {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  display: grid; grid-template-columns: 1fr 1fr 1fr;
-  border-top: 1px solid rgba(238,224,48,0.15); z-index: 2;
-}
-.hero-section-btn {
-  padding: 20px 24px; font-family: var(--font-px); font-size: 7px; color: var(--muted);
-  text-decoration: none; letter-spacing: 2px;
-  border-right: 1px solid rgba(238,224,48,0.1);
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  transition: all 0.25s; position: relative; overflow: hidden;
-}
-.hero-section-btn:last-child { border-right: none; }
-.hero-section-btn::after {
-  content: ''; position: absolute; left: 0; bottom: 0;
-  width: 0; height: 2px; background: var(--y); transition: width 0.4s var(--ease);
-}
-.hero-section-btn:hover        { color: var(--y); }
-.hero-section-btn:hover::after { width: 100%; }
-.hero-section-btn .num { font-size: 6px; color: rgba(238,224,48,0.3); }
-
-/* ── 8b. HERO PERSON IMAGE ─────────────────────────────── */
+/* ── 8b. HERO PERSON IMAGE — LARGER ─────────────────────── */
 .hero-person {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(300px, 40vw, 560px);
+  /* Increased from clamp(300px,40vw,560px) → much bigger */
+  width: clamp(420px, 60vw, 820px);
   z-index: 1;
   pointer-events: none;
   display: flex;
@@ -356,74 +290,29 @@ body::before {
   height: auto;
   display: block;
   mix-blend-mode: screen;
-  filter: contrast(1.05) brightness(1.1);
+  filter: contrast(1.08) brightness(1.15);
   mask-image: linear-gradient(
     to bottom,
     rgba(0,0,0,1) 0%,
-    rgba(0,0,0,1) 65%,
-    rgba(0,0,0,0.6) 85%,
+    rgba(0,0,0,1) 60%,
+    rgba(0,0,0,0.5) 82%,
     rgba(0,0,0,0) 100%
   );
   -webkit-mask-image: linear-gradient(
     to bottom,
     rgba(0,0,0,1) 0%,
-    rgba(0,0,0,1) 65%,
-    rgba(0,0,0,0.6) 85%,
+    rgba(0,0,0,1) 60%,
+    rgba(0,0,0,0.5) 82%,
     rgba(0,0,0,0) 100%
   );
 }
-
-/* Ensure hero-content stays above person */
+/* Content stays above the person */
 .hero-content { z-index: 2; position: relative; }
 
 @media (max-width: 767.98px) {
   .hero-person {
-    width: clamp(200px, 70vw, 340px);
-    opacity: 0.45;
-  }
-}
-
-
-/* ── 8b. HERO PERSON IMAGE ─────────────────────────────── */
-.hero-person {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: clamp(300px, 40vw, 560px);
-  z-index: 1;
-  pointer-events: none;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-.hero-person-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  mix-blend-mode: screen;
-  filter: contrast(1.05) brightness(1.1);
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0,0,0,1) 0%,
-    rgba(0,0,0,1) 65%,
-    rgba(0,0,0,0.6) 85%,
-    rgba(0,0,0,0) 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0,0,0,1) 0%,
-    rgba(0,0,0,1) 65%,
-    rgba(0,0,0,0.6) 85%,
-    rgba(0,0,0,0) 100%
-  );
-}
-.hero-content { z-index: 2; position: relative; }
-
-@media (max-width: 767.98px) {
-  .hero-person {
-    width: clamp(200px, 70vw, 340px);
-    opacity: 0.45;
+    width: clamp(280px, 85vw, 480px);
+    opacity: 0.55;
   }
 }
 
@@ -500,8 +389,6 @@ body::before {
 }
 
 /* ── 12. FILMOGRAPHY CARDS ──────────────────────────────── */
-
-/* Override Bootstrap g-1 → proper gap for all project grids */
 #filmography .row,
 #photography .row,
 #contact .row { --bs-gutter-x: 20px; --bs-gutter-y: 20px; }
@@ -517,7 +404,6 @@ body::before {
 #filmography .card:hover         { background: var(--s2); }
 #filmography .card:hover::before { height: 100%; }
 
-/* Still wrapper */
 .film-still-wrap { position: relative; overflow: hidden; display: block; }
 
 .still-img {
@@ -525,31 +411,6 @@ body::before {
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
 
-/* YouTube badge on still */
-.yt-badge {
-  position: absolute; top: 12px; right: 12px; z-index: 3;
-  font-family: var(--font-px); font-size: 5px; letter-spacing: 1px;
-  color: var(--bg); background: var(--y);
-  padding: 5px 9px; border-radius: 0 !important;
-}
-
-.film-still-placeholder {
-  position: absolute; inset: 0;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 10px; background: var(--s2);
-}
-.film-still-placeholder .ph-title {
-  font-family: var(--font-px); font-size: 6px;
-  color: rgba(238,224,48,0.14); letter-spacing: 3px; text-align: center;
-  padding: 0 20px; line-height: 2.2;
-}
-.film-still-placeholder .ph-icon {
-  display: grid; grid-template-columns: repeat(4,1fr);
-  gap: 3px; width: 44px; opacity: 0.1;
-}
-.film-still-placeholder .ph-icon div { height: 4px; background: var(--y); }
-
-/* Hover overlay */
 .film-overlay {
   position: absolute; inset: 0; background: rgba(238,224,48,0);
   display: flex; align-items: center; justify-content: center;
@@ -564,7 +425,6 @@ body::before {
 .film-still-wrap:hover .film-overlay       { background: rgba(238,224,48,0.88); }
 .film-still-wrap:hover .film-overlay-text  { opacity: 1; transform: translateY(0); }
 
-/* Card info */
 .film-info { padding: 22px 24px 28px; }
 .film-meta-top {
   display: flex; align-items: center;
@@ -573,10 +433,6 @@ body::before {
 .film-title-text {
   font-family: var(--font-px); font-size: 9px;
   color: var(--ink); line-height: 1.9; margin-bottom: 4px;
-}
-.film-sub {
-  font-family: var(--font-bd); font-size: 11px;
-  color: var(--muted); font-style: italic; margin-bottom: 12px;
 }
 .film-details {
   display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; margin-bottom: 16px;
@@ -589,7 +445,6 @@ body::before {
 .film-details .role dd { color: var(--y); }
 .film-details .full    { grid-column: 1 / -1; }
 
-/* Featured card (Para Ksatriya Graha) */
 .film-card-featured {
   background: var(--s1); border-left: 3px solid var(--y);
   position: relative; overflow: hidden; transition: background 0.3s;
@@ -619,7 +474,6 @@ body::before {
   font-family: var(--font-px); font-size: 13px; color: var(--ink); line-height: 1.9;
 }
 
-/* Video screen — now uses real thumbnail */
 .video-screen {
   position: relative; background: var(--s1);
   display: flex; align-items: center; justify-content: center;
@@ -658,21 +512,11 @@ body::before {
   font-family: var(--font-px); font-size: 6px;
   color: rgba(238,224,48,0.5); letter-spacing: 2px;
 }
-.yt-embed-wrap { position: absolute; inset: 0; }
-.yt-embed-wrap iframe { width: 100%; height: 100%; border: none; }
 
 /* ── 14. PHOTOGRAPHY ────────────────────────────────────── */
 .photo-card-wrap {
   position: relative; overflow: hidden; background: var(--s1);
   display: flex; flex-direction: column;
-}
-.photo-placeholder {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center; background: var(--s2);
-}
-.photo-placeholder::before {
-  content: 'PHOTO'; font-family: var(--font-px); font-size: 8px;
-  color: rgba(238,224,48,0.06); letter-spacing: 6px;
 }
 .photo-overlay {
   position: absolute; inset: 0; background: rgba(238,224,48,0);
@@ -688,7 +532,6 @@ body::before {
 .photo-card-wrap:hover .photo-overlay      { background: rgba(238,224,48,0.88); }
 .photo-card-wrap:hover .photo-overlay-text { opacity: 1; transform: translateY(0); }
 
-/* Photos scale subtly on hover */
 .photo-card-wrap .ratio img.still-img {
   transition: transform 0.5s var(--ease);
 }
@@ -705,14 +548,20 @@ body::before {
 }
 .photo-role-text { font-family: var(--font-bd); font-size: 11px; color: var(--y); margin-bottom: 14px; }
 
-/* ── 15. CONTACT ────────────────────────────────────────── */
+/* ── 15. CONTACT — NEW ICON STYLE ───────────────────────── */
 .contact-section { background: var(--s1); border-top: 1px solid rgba(238,224,48,0.08); }
+
 .contact-card {
-  background: var(--bg); border: 1px solid rgba(238,224,48,0.08);
-  padding: 36px 32px; height: 100%;
+  background: var(--bg);
+  border: 1px solid rgba(238,224,48,0.08);
+  padding: 36px 28px 32px;
+  height: 100%;
   position: relative; overflow: hidden;
   transition: background 0.3s, border-color 0.4s;
-  text-decoration: none; display: block;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .contact-card::before {
   content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
@@ -721,9 +570,37 @@ body::before {
 }
 .contact-card:hover         { background: var(--s2); border-color: rgba(238,224,48,0.3); }
 .contact-card:hover::before { transform: scaleX(1); }
-.contact-icon { font-family: var(--font-px); font-size: 16px; color: var(--y); margin-bottom: 20px; display: block; opacity: 0.6; }
-.contact-label { font-family: var(--font-px); font-size: 7px; color: var(--muted); letter-spacing: 3px; margin-bottom: 10px; display: block; }
-.contact-value { font-family: var(--font-bd); font-size: 13px; color: var(--ink); display: block; margin-bottom: 22px; }
+
+/* Bootstrap icon wrapper */
+.contact-icon-wrap {
+  width: 52px; height: 52px;
+  border: 1px solid rgba(238,224,48,0.2);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 8px;
+  transition: background 0.25s, border-color 0.25s;
+  flex-shrink: 0;
+}
+.contact-card:hover .contact-icon-wrap {
+  background: rgba(238,224,48,0.08);
+  border-color: var(--y);
+}
+
+.contact-bi-icon {
+  font-size: 22px;
+  color: var(--y);
+  transition: transform 0.25s var(--ease);
+}
+.contact-card:hover .contact-bi-icon { transform: scale(1.15); }
+
+.contact-label {
+  font-family: var(--font-px); font-size: 6px;
+  color: var(--muted); letter-spacing: 3px; display: block;
+}
+.contact-value {
+  font-family: var(--font-bd); font-size: 12px;
+  color: var(--ink); display: block; margin-bottom: 6px;
+  word-break: break-all;
+}
 
 /* ── 16. FOOTER ─────────────────────────────────────────── */
 footer.site-footer { background: var(--y); padding: 60px; }
@@ -732,8 +609,6 @@ footer.site-footer { background: var(--y); padding: 60px; }
 .footer-right-text p { font-family: var(--font-px); font-size: 6px; color: rgba(0,0,0,0.4); letter-spacing: 2px; line-height: 2.5; margin: 0; }
 
 /* ── 17. RESPONSIVE ─────────────────────────────────────── */
-
-/* Disable custom cursor on touch devices */
 @media (hover: none) and (pointer: coarse) {
   html, a, button { cursor: auto; }
   .cursor, .cursor-ring { display: none !important; }
@@ -749,63 +624,46 @@ footer.site-footer { background: var(--y); padding: 60px; }
 }
 
 @media (max-width: 767.98px) {
-  /* Hero */
   .hero-title          { font-size: clamp(24px, 9vw, 52px); }
   .hero-name           { font-size: 12px; padding: 14px 20px; }
   .hero-content        { padding: 48px 16px 200px; }
-  .hero-person         { width: clamp(220px, 75vw, 340px); opacity: 0.4; }
 
-  /* Nav bottom bar */
   .hero-sections-bar   { grid-template-columns: 1fr; }
   .hero-section-btn    { border-right: none; border-top: 1px solid rgba(238,224,48,0.1); justify-content: flex-start; }
 
-  /* Section */
   .section             { padding: 64px 0; }
   .section-head        { flex-direction: column; align-items: flex-start; gap: 12px; }
   .section-title       { font-size: clamp(16px, 5vw, 26px); }
   .section-head        { margin-bottom: 36px; }
 
-  /* Film cards */
   .film-details        { grid-template-columns: 1fr; }
   .film-title-text     { font-size: 8px; }
   .film-info           { padding: 16px 16px 20px; }
   .award-tag           { font-size: 5px; }
 
-  /* Video */
   .video-screen        { min-height: 200px; }
   .video-info          { padding: 28px 20px; }
   .video-title-text    { font-size: 11px; }
 
-  /* Contact */
-  .contact-card        { padding: 28px 22px; }
-  .contact-icon        { font-size: 13px; margin-bottom: 14px; }
-  .contact-value       { font-size: 12px; }
+  .contact-card        { padding: 24px 20px; }
 
-  /* Footer */
   footer.site-footer   { padding: 36px 20px; }
   .footer-name         { font-size: 9px; }
   footer.site-footer .row      { flex-direction: column; gap: 20px; }
   footer.site-footer .text-end { text-align: left !important; }
 
-  /* Hide oversized decorative elements */
-  .hero-pixel-ornament { display: none; }
   .bg-word             { font-size: 72px; opacity: 0.015; }
 }
 
 @media (max-width: 575.98px) {
-  /* Navbar brand & links */
   .navbar              { padding: 0 16px; height: 56px; }
   .navbar-brand        { font-size: 9px; }
 
-  /* Hero */
   .hero                { padding-top: 56px; }
   .hero-title          { font-size: clamp(20px, 8vw, 40px); letter-spacing: 2px; }
   .hero-name           { padding: 12px 16px; font-size: 11px; }
   .hero-content        { padding: 36px 12px 180px; }
-  .hero-person         { width: clamp(200px, 80vw, 300px); opacity: 0.35; }
-  .hero-socials        { flex-direction: column; gap: 12px; align-items: center; }
 
-  /* Section & cards */
   .section             { padding: 52px 0; }
   .section-title       { font-size: clamp(14px, 5vw, 22px); }
   .film-info           { padding: 14px 14px 18px; }
@@ -813,29 +671,24 @@ footer.site-footer { background: var(--y); padding: 60px; }
   .film-details dt     { font-size: 5px; }
   .film-details dd     { font-size: 10px; }
 
-  /* Video section */
   .video-screen        { min-height: 180px; }
   .video-screen-label  { font-size: 5px; bottom: 12px; left: 14px; }
   .play-icon           { width: 48px; height: 48px; }
 
-  /* Photography */
   .photo-title-text    { font-size: 6px; }
   .photo-role-text     { font-size: 10px; }
   .photo-info          { padding: 14px 14px; }
 
-  /* Contact */
-  .contact-card        { padding: 24px 18px; }
-  .contact-icon        { font-size: 11px; }
+  .contact-card        { padding: 20px 16px; }
+  .contact-bi-icon     { font-size: 18px; }
   .contact-value       { font-size: 11px; }
-  .contact-label       { font-size: 6px; }
+  .contact-label       { font-size: 5px; }
 
-  /* Footer */
   footer.site-footer   { padding: 28px 16px; }
   .footer-name         { font-size: 8px; }
   .footer-handle       { font-size: 10px; }
   .footer-right-text p { font-size: 5px; }
 
-  /* Pixel line & bg decorations */
   .bg-word             { display: none; }
   .btn-pixel           { font-size: 5px; padding: 10px 14px; }
   .btn-pixel-sm        { font-size: 5px; padding: 7px 11px; }
