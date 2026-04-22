@@ -6,6 +6,7 @@
   <meta name="description" content="Creative Portfolio — Denendro Putro Nuswantoro. Film Producer, Project Manager, Talent Coordinator.">
   <title>Denendro Putro Nuswantoro — Hixoo Creative Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +18,120 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container-fluid px-0">
-      <a class="navbar-brand" href="#hero">Hixoo</a>
+
+      <!-- LOGO SVG — matches reference image -->
+      <a class="navbar-brand" href="#hero" style="padding:0;">
+        <svg width="42" height="42" viewBox="0 0 200 210" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hixoo Logo">
+          <defs>
+            <!-- Clip to H shape only -->
+            <clipPath id="hClip">
+              <!-- Left pillar with serif flare bottom-left -->
+              <path d="
+                M18,8 L18,8
+                C18,8 14,8 14,12
+                L14,202
+                C14,202 14,206 18,206
+                L18,206
+                C22,206 22,202 22,202
+                L22,202
+                Q30,196 44,200
+                L56,200
+                C60,200 60,196 60,196
+                L60,116
+                L140,116
+                L140,196
+                C140,196 140,200 144,200
+                L156,200
+                Q170,196 178,202
+                L178,202
+                C178,202 178,206 182,206
+                L182,206
+                C186,206 186,202 186,202
+                L186,12
+                C186,12 186,8 182,8
+                L182,8
+                C178,8 178,12 178,12
+                L178,12
+                Q170,18 156,14
+                L144,14
+                C140,14 140,18 140,18
+                L140,94
+                L60,94
+                L60,18
+                C60,18 60,14 56,14
+                L44,14
+                Q30,18 22,12
+                L22,12
+                C22,12 22,8 18,8
+                Z
+              "/>
+            </clipPath>
+          </defs>
+
+          <!-- === BASE LAYER: full H in dark === -->
+          <!-- Left pillar -->
+          <path d="
+            M22,12 Q30,18 44,14 L56,14 C60,14 60,18 60,18
+            L60,200 C60,200 60,200 56,200
+            L44,200 Q30,196 22,202
+            C18,202 14,202 14,198
+            L14,16 C14,12 18,8 22,12 Z
+          " fill="#1a1a1a"/>
+
+          <!-- Right pillar -->
+          <path d="
+            M178,12 Q170,18 156,14 L144,14 C140,14 140,18 140,18
+            L140,200 C140,200 140,200 144,200
+            L156,200 Q170,196 178,202
+            C182,202 186,202 186,198
+            L186,16 C186,12 182,8 178,12 Z
+          " fill="#1a1a1a"/>
+
+          <!-- Crossbar -->
+          <rect x="60" y="94" width="80" height="22" fill="#1a1a1a"/>
+
+          <!-- === YELLOW DIAGONAL SLASH === -->
+          <!-- Slash: diagonal band from top-right area sweeping to bottom-left, 
+               with a thin pointed tail going upper-right,
+               and a wide swoosh/flare at bottom-left -->
+          <path d="
+            M195,52
+            C192,44 186,38 180,34
+            L88,174
+            C80,186 68,198 52,204
+            L36,208
+            C28,210 20,208 16,204
+            C24,202 36,196 48,188
+            L152,42
+            C158,34 164,24 168,14
+            L178,6
+            C188,2 196,6 200,14
+            Z
+          " fill="#E8A800" clip-path="url(#hClip)"/>
+
+          <!-- Thin pointed tail extending upper right beyond H -->
+          <path d="
+            M175,8 C180,4 188,2 196,6 L200,14 C196,12 188,8 180,12 Z
+          " fill="#E8A800"/>
+
+          <!-- === REDRAW H TOPS (above slash) in dark to keep them black === -->
+          <!-- Left pillar top half -->
+          <path d="
+            M22,12 Q30,18 44,14 L56,14 C60,14 60,18 60,18
+            L60,94 L14,94 L14,16 C14,12 18,8 22,12 Z
+          " fill="#1a1a1a"/>
+
+          <!-- Right pillar top half -->
+          <path d="
+            M178,12 Q170,18 156,14 L144,14 C140,14 140,18 140,18
+            L140,94 L186,94 L186,16 C186,12 182,8 178,12 Z
+          " fill="#1a1a1a"/>
+
+          <!-- Crossbar top half stays dark -->
+          <rect x="60" y="94" width="80" height="11" fill="#1a1a1a"/>
+        </svg>
+      </a>
+
       <button class="navbar-toggler ms-auto" type="button"
               data-bs-toggle="collapse" data-bs-target="#navbarContent"
               aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -310,7 +424,7 @@
                 <div class="film-still-wrap" style="height:100%; min-height:280px;">
                   <a href="#" style="display:block; height:100%;">
                     <div class="ratio ratio-16x9">
-                      <img src="images/graha.jpeg" alt="still-img" class="Para Ksatrya Graha">
+                      <img src="images/graha.jpeg" alt="Para Ksatriya Graha" class="still-img">
                     </div>
                     <div class="film-overlay"><div class="film-overlay-text">COMING SOON<br>▶ STAY TUNED</div></div>
                   </a>
@@ -484,31 +598,65 @@
         </div>
         <span class="section-year">OPEN FOR WORK</span>
       </div>
-      <div class="row g-1">
-        <div class="col-12 col-md-4" data-reveal="up" data-delay="1">
-          <a href="https://wa.me/6281295038577" target="_blank" rel="noopener" class="contact-card">
-            <span class="contact-icon">[WA]</span>
+
+      <div class="row g-3">
+
+        <!-- WHATSAPP -->
+        <div class="col-12 col-sm-6 col-lg-3" data-reveal="up" data-delay="1">
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i class="bi bi-whatsapp contact-bi-icon"></i>
+            </div>
             <span class="contact-label">WHATSAPP</span>
             <span class="contact-value">+62 812-9503-8577</span>
-            <span class="btn-pixel btn-pixel-sm d-inline-flex"><span class="lbl">MESSAGE</span><span class="arr">→</span></span>
-          </a>
+            <a href="https://wa.me/6281295038577" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm d-inline-flex mt-auto">
+              <span class="lbl">MESSAGE</span><span class="arr">→</span>
+            </a>
+          </div>
         </div>
-        <div class="col-12 col-md-4" data-reveal="up" data-delay="2">
-          <a href="https://www.instagram.com/hixooozz/" target="_blank" rel="noopener" class="contact-card">
-            <span class="contact-icon">[IG]</span>
+
+        <!-- INSTAGRAM -->
+        <div class="col-12 col-sm-6 col-lg-3" data-reveal="up" data-delay="2">
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i class="bi bi-instagram contact-bi-icon"></i>
+            </div>
             <span class="contact-label">INSTAGRAM</span>
             <span class="contact-value">@Hixooozz</span>
-            <span class="btn-pixel btn-pixel-sm d-inline-flex"><span class="lbl">FOLLOW</span><span class="arr">→</span></span>
-          </a>
+            <a href="https://www.instagram.com/hixooozz/" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm d-inline-flex mt-auto">
+              <span class="lbl">FOLLOW</span><span class="arr">→</span>
+            </a>
+          </div>
         </div>
-        <div class="col-12 col-md-4" data-reveal="up" data-delay="3">
-          <a href="mailto:dyruinsnus@gmail.com" class="contact-card">
-            <span class="contact-icon">[MAIL]</span>
+
+        <!-- TIKTOK -->
+        <div class="col-12 col-sm-6 col-lg-3" data-reveal="up" data-delay="3">
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i class="bi bi-tiktok contact-bi-icon"></i>
+            </div>
+            <span class="contact-label">TIKTOK</span>
+            <span class="contact-value">@denendroptr</span>
+            <a href="https://www.tiktok.com/@denendroptr?_r=1&_t=ZS-95kCzlj5sHK" target="_blank" rel="noopener" class="btn-pixel btn-pixel-sm d-inline-flex mt-auto">
+              <span class="lbl">FOLLOW</span><span class="arr">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="col-12 col-sm-6 col-lg-3" data-reveal="up" data-delay="4">
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i class="bi bi-envelope-fill contact-bi-icon"></i>
+            </div>
             <span class="contact-label">EMAIL</span>
             <span class="contact-value">dyruinsnus@gmail.com</span>
-            <span class="btn-pixel btn-pixel-sm d-inline-flex"><span class="lbl">SEND EMAIL</span><span class="arr">→</span></span>
-          </a>
+            <a href="mailto:dyruinsnus@gmail.com" class="btn-pixel btn-pixel-sm d-inline-flex mt-auto">
+              <span class="lbl">SEND EMAIL</span><span class="arr">→</span>
+            </a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
