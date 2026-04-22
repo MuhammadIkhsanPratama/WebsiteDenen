@@ -97,7 +97,7 @@ body::before {
 /* ── 7. NAVBAR ──────────────────────────────────────────── */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 500;
-  height: 72px; padding: 0 48px;
+  height: 96px; padding: 0 48px;
   background: transparent; border-bottom: 1px solid transparent;
   transition: background 0.4s, border-color 0.4s;
   display: flex; align-items: center;
@@ -121,7 +121,7 @@ body::before {
   align-items: center;
 }
 .navbar-logo-img {
-  height: 52px;
+  height: 64px;
   width: auto;
   display: block;
   filter:
