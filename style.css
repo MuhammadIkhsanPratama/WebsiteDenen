@@ -334,7 +334,7 @@ body::before {
 
 @media (max-width: 767.98px) {
   .hero-person {
-    width: clamp(930px, 260vw, 1532px);
+    width: clamp(644px, 180vw, 1061px);
     opacity: 0.85;
   }
 }
